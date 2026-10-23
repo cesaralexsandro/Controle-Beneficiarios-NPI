@@ -1,0 +1,24 @@
+unit unit_dependentes;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  Tform_dependentes = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  form_dependentes: Tform_dependentes;
+
+implementation
+
+{$R *.dfm}
+
+end.

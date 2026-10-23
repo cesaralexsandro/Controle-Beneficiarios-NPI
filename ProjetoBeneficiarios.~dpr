@@ -1,0 +1,29 @@
+program ProjetoBeneficiarios;
+
+uses
+  Forms,
+  unit_menu in 'unit_menu.pas' {form_menu},
+  unit_login in 'unit_login.pas' {form_login},
+  unit_funcionarios in 'unit_funcionarios.pas' {form_funcionarios},
+  unit_beneficiarios in 'unit_beneficiarios.pas' {form_beneficiarios},
+  unit_relatorios in 'unit_relatorios.pas' {form_relatorios},
+  unit_rel_beneficiarios in 'unit_rel_beneficiarios.pas' {form_rel_beneficiarios};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tform_menu, form_menu);
+  Application.CreateForm(Tform_funcionarios, form_funcionarios);
+  Application.CreateForm(Tform_beneficiarios, form_beneficiarios);
+  Application.CreateForm(Tform_relatorios, form_relatorios);
+  Application.CreateForm(Tform_rel_beneficiarios, form_rel_beneficiarios);
+  form_menu.Hide;
+
+  form_login := Tform_login.Create(nil);
+  form_login.ShowModal;
+  form_login.Free;
+
+  Application.Run;
+
+end.

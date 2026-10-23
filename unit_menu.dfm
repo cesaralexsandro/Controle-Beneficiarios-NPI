@@ -1,0 +1,91 @@
+object form_menu: Tform_menu
+  Left = 172
+  Top = 125
+  Width = 1064
+  Height = 540
+  Caption = 'Sistema de Benefici'#225'rios'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 14
+  object lbl_usuario: TLabel
+    Left = 48
+    Top = 16
+    Width = 40
+    Height = 14
+    Caption = 'Usuario:'
+  end
+  object Label2: TLabel
+    Left = 376
+    Top = 40
+    Width = 266
+    Height = 32
+    Caption = 'Controle Beneficiarios'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object btn_funcionarios: TBitBtn
+    Left = 432
+    Top = 120
+    Width = 139
+    Height = 25
+    Caption = 'Funcion'#225'rios'
+    TabOrder = 0
+    OnClick = btn_funcionariosClick
+  end
+  object btn_sair: TBitBtn
+    Left = 464
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 1
+    OnClick = btn_sairClick
+  end
+  object btn_beneficiario: TBitBtn
+    Left = 432
+    Top = 152
+    Width = 139
+    Height = 25
+    Caption = 'Beneficiario'
+    TabOrder = 2
+    OnClick = btn_beneficiarioClick
+  end
+  object btn_relatorios: TBitBtn
+    Left = 432
+    Top = 184
+    Width = 137
+    Height = 25
+    Caption = 'Relat'#243'rios'
+    TabOrder = 3
+    OnClick = btn_relatoriosClick
+  end
+  object ConexaoBD: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=ControleBeneficiarios;Data Source=TESTE' +
+      'NOT\SQLEXPRESS'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 296
+    Top = 168
+  end
+  object ADOQuery1: TADOQuery
+    Parameters = <>
+    Left = 328
+    Top = 168
+  end
+end
