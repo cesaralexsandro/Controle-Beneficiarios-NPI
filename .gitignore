@@ -1,0 +1,19 @@
+# Binários e Executáveis
+*.exe
+*.dll
+*.bpl
+*.dcp
+
+# Arquivos de compilação do Delphi 7
+*.dcu
+*.~*
+*.ddp
+*.dof
+*.cfg
+*.cfg
+*.local
+*.identcache
+
+# Histórico e Backup
+__history/
+Backup/
